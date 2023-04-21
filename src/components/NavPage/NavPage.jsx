@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./NavPage.scss";
 
 export default function NavPage({ page, pages, setPage }) {
    // hooks
@@ -13,7 +14,7 @@ export default function NavPage({ page, pages, setPage }) {
    };
 
    return (
-      <div>
+      <div className="NavPage">
          <button disabled={page == 1} onClick={handlePrev}>
             prev
          </button>

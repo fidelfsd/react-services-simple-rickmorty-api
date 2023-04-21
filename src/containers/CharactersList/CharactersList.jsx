@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Character from "../Character/Character";
+import Character from "../../components/Character/Character";
 import "./CharactersList.scss";
 import rickMortyService from "../../_services/rickMortyService";
-import NavPage from "../NavPage/NavPage";
+import NavPage from "../../components/NavPage/NavPage";
 
 export default function CharactersList() {
    const initialCharacters = [

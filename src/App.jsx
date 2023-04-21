@@ -1,11 +1,24 @@
 import "./App.scss";
-import CharactersList from "./components/CharactersList/CharactersList";
-import NavPage from "./components/NavPage/NavPage";
+import Header from "./components/Header/Header";
+import About from "./containers/About/About";
+import CharacterDetail from "./containers/CharacterDetail/CharacterDetail";
+import CharactersList from "./containers/CharactersList/CharactersList";
+
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 function App() {
    return (
       <>
-         <h1>Rick Morty List</h1>
-         <CharactersList />
+         <BrowserRouter>
+            <Header />
+            <hr />
+            <Routes>
+               <Route path="/" element={<Navigate to="/character" />} />
+               <Route path="/character" element={<CharactersList />} />
+               <Route path="/character/:id" element={<CharacterDetail />} />
+               <Route path="/about" element={<About />} />
+            </Routes>
+            {/* Footer */}
+         </BrowserRouter>
       </>
    );
 }

@@ -9,7 +9,6 @@ export default function Character({ character }) {
             <div className="card-body">
                <h5 className="card-title">{character.name}</h5>
                <p>{character.status}</p>
-               <a className="btn btn-primary">More</a>
             </div>
          </div>
       </div>
